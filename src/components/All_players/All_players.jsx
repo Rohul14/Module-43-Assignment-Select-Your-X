@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function All_players({players,handleByePlayer}) {
     // console.log(players)
-    const {img,name,country,flag,club,position,footed,price,id,}=players
+    const {img,name,country,flag,club,position,footed,price}=players
 
     return (
         <div className='border-2 border-[#1313131A] p-4 rounded-xl space-y-4'>
@@ -27,8 +27,8 @@ function All_players({players,handleByePlayer}) {
             <div className='flex justify-between items-center '>
                 <p className='font-medium'>Price: {price}$</p>
                 <button 
-                    onClick={()=>handleByePlayer(price,name)}
-                    className='bg-blue-100 hover:bg-blue-400 hover:text-white text-black rounded-3xl text-sm transition-all ease-in-out cursor-pointer border border-blue-700 px-4 py-1'
+                    onClick={()=>handleByePlayer(players)}
+                    className='bg-blue-100 hover:bg-blue-400 hover:text-white text-black rounded-3xl text-sm transition-all ease-in-out cursor-pointer border border-blue-700 px-4 py-2'
                 >Choose Player</button>
             </div>
 
